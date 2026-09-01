@@ -8,6 +8,8 @@
 
 这是一个基于 [Plasmo](https://www.plasmo.com/) 的 Manifest V3 浏览器扩展，推荐用于 Arc，也适用于 Chrome、Edge、Brave 等 Chromium 浏览器。
 
+![微信读书阅读进度扩展预览](docs/preview.png)
+
 ## 功能
 
 - 从微信读书页面已有的目录/笔记数据中读取真实的全书进度
