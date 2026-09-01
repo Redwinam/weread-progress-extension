@@ -1,0 +1,28 @@
+{
+  "name": "weread-reading-progress",
+  "displayName": "微信读书阅读进度",
+  "version": "1.0.0",
+  "description": "在微信读书网页版的翻页按钮之间显示实时全书进度。",
+  "author": "redwinam",
+  "license": "MIT",
+  "scripts": {
+    "dev": "plasmo dev --target=chrome-mv3",
+    "build": "plasmo build --target=chrome-mv3",
+    "package": "plasmo package --target=chrome-mv3"
+  },
+  "dependencies": {
+    "plasmo": "0.90.5",
+    "react": "18.3.1",
+    "react-dom": "18.3.1"
+  },
+  "devDependencies": {
+    "@types/react": "18.3.31",
+    "@types/react-dom": "18.3.7",
+    "typescript": "5.8.3"
+  },
+  "manifest": {
+    "host_permissions": [
+      "https://weread.qq.com/*"
+    ]
+  }
+}
