@@ -113,7 +113,7 @@ function readPagerCenter(): number | null {
 
 function ProgressOverlay() {
   const [reader, setReader] = useState<ReaderState | null>(null)
-  const [bottom, setBottom] = useState(18)
+  const [bottom, setBottom] = useState<number | null>(null)
   const rootRef = useRef<HTMLButtonElement>(null)
   const frameRef = useRef<number | null>(null)
   const followUpTimersRef = useRef<number[]>([])
@@ -122,10 +122,7 @@ function ProgressOverlay() {
     const root = rootRef.current
     const pagerCenter = readPagerCenter()
 
-    if (!root || pagerCenter === null) {
-      setBottom(18)
-      return
-    }
+    if (!root || pagerCenter === null) return
 
     const rootHeight = root.getBoundingClientRect().height
     const nextBottom = Math.max(
@@ -221,7 +218,7 @@ function ProgressOverlay() {
 
   const displayValue = formatProgress(reader.progress)
   const style: ProgressStyle = {
-    "--wrp-bottom": `${bottom}px`,
+    "--wrp-bottom": `${bottom ?? 18}px`,
     "--wrp-progress": `${reader.progress}%`
   }
 
@@ -236,6 +233,7 @@ function ProgressOverlay() {
       type="button"
       className="wrp-root"
       data-theme={reader.dark ? "dark" : "light"}
+      data-position-ready={bottom === null ? "false" : "true"}
       style={style}
       title={`${reader.chapter} · 已读 ${displayValue}%（点击打开目录）`}
       aria-label={`全书阅读进度 ${displayValue}%，${reader.chapter}，点击打开目录`}

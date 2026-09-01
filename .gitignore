@@ -3,3 +3,4 @@ build/
 node_modules/
 *.zip
 *.pem
+*.tsbuildinfo

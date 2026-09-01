@@ -37,17 +37,27 @@
     "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
   font-variant-numeric: tabular-nums;
   text-align: left;
-  opacity: 0.88;
-  transform: translateX(-50%);
+  visibility: hidden;
+  pointer-events: none;
+  opacity: 0;
+  transform: translateX(-50%) translateY(6px);
   transition:
+    bottom 180ms ease-out,
     opacity 220ms ease,
     transform 280ms cubic-bezier(0.2, 0.8, 0.2, 1),
     box-shadow 220ms ease,
     background-color 220ms ease;
 }
 
-.wrp-root:hover,
-.wrp-root:focus-visible {
+.wrp-root[data-position-ready="true"] {
+  visibility: visible;
+  pointer-events: auto;
+  opacity: 0.88;
+  transform: translateX(-50%);
+}
+
+.wrp-root[data-position-ready="true"]:hover,
+.wrp-root[data-position-ready="true"]:focus-visible {
   opacity: 1;
   transform: translateX(-50%) translateY(-2px);
   box-shadow:

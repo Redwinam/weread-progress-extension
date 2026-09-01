@@ -1,7 +1,7 @@
 {
   "name": "weread-reading-progress",
   "displayName": "微信读书阅读进度",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "在微信读书网页版的翻页按钮之间显示实时全书进度。",
   "author": "redwinam",
   "license": "CC-BY-NC-4.0",
