@@ -2,7 +2,7 @@
 
 [![GitHub Release](https://img.shields.io/github/v/release/Redwinam/weread-progress-extension?display_name=tag&style=flat-square)](https://github.com/Redwinam/weread-progress-extension/releases/latest)
 [![Manifest V3](https://img.shields.io/badge/Manifest-V3-5d646e?style=flat-square)](https://developer.chrome.com/docs/extensions/develop/migrate/what-is-mv3)
-[![License: MIT](https://img.shields.io/badge/License-MIT-5d646e?style=flat-square)](LICENSE)
+[![License: CC BY-NC 4.0](https://img.shields.io/badge/License-CC_BY--NC_4.0-5d646e?style=flat-square)](LICENSE)
 
 在微信读书网页版的“上一页 / 下一页”按钮之间，显示当前章节和真实的全书阅读进度。无需打开目录，也不根据页码猜测进度。
 
@@ -89,4 +89,4 @@ pnpm package
 
 ## 许可证
 
-[MIT](LICENSE)
+本项目采用 [CC BY-NC 4.0（署名—非商业性使用 4.0 国际）](LICENSE)。你可以在注明作者、附上许可证链接并说明修改内容的前提下分享或改编本项目，但不得用于商业目的。完整法律文本见 [Creative Commons 官方页面](https://creativecommons.org/licenses/by-nc/4.0/legalcode)。
