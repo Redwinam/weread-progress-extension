@@ -4,7 +4,7 @@
 [![Manifest V3](https://img.shields.io/badge/Manifest-V3-5d646e?style=flat-square)](https://developer.chrome.com/docs/extensions/develop/migrate/what-is-mv3)
 [![License: CC BY-NC 4.0](https://img.shields.io/badge/License-CC_BY--NC_4.0-5d646e?style=flat-square)](LICENSE)
 
-在微信读书网页版的“上一页 / 下一页”按钮之间，显示当前章节和真实的全书阅读进度。无需打开目录，也不根据页码猜测进度。
+在微信读书网页版的“上一页 / 下一页”按钮之间，以一条极简进度线显示真实的全书阅读进度。无需打开目录，也不根据页码猜测进度。
 
 这是一个基于 [Plasmo](https://www.plasmo.com/) 的 Manifest V3 浏览器扩展，推荐用于 Arc，也适用于 Chrome、Edge、Brave 等 Chromium 浏览器。
 
@@ -13,7 +13,7 @@
 ## 功能
 
 - 从微信读书页面已有的目录/笔记数据中读取真实的全书进度
-- 自动显示当前章节、百分比和深灰色进度条
+- 以透明、无边框的单行布局显示百分比和深灰色进度条
 - 自动对齐“上一页 / 下一页”按钮，并随窗口尺寸调整位置
 - 适配微信读书的浅色与深色阅读主题
 - 翻页、切换章节或返回页面后自动更新

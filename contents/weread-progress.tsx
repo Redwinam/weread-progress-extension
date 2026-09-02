@@ -17,7 +17,6 @@ export const getStyle: PlasmoGetStyle = () => {
 
 type ReaderState = {
   progress: number
-  chapter: string
   dark: boolean
 }
 
@@ -64,17 +63,6 @@ function readProgress(): number | null {
   }
 
   return null
-}
-
-function readChapterTitle(): string {
-  const selectedTitle = document.querySelector(
-    ".readerCatalog_list_item_selected .readerCatalog_list_item_title_text"
-  )?.textContent
-  const headerTitle = document.querySelector(
-    ".renderTargetPageInfo_header_chapterTitle"
-  )?.textContent
-
-  return (selectedTitle || headerTitle || "当前章节").trim()
 }
 
 function readDarkTheme(): boolean {
@@ -139,14 +127,12 @@ function ProgressOverlay() {
     if (progress !== null) {
       const nextState = {
         progress,
-        chapter: readChapterTitle(),
         dark: readDarkTheme()
       }
       setReader((current) => {
         if (
           current &&
           current.progress === nextState.progress &&
-          current.chapter === nextState.chapter &&
           current.dark === nextState.dark
         ) {
           return current
@@ -235,17 +221,13 @@ function ProgressOverlay() {
       data-theme={reader.dark ? "dark" : "light"}
       data-position-ready={bottom === null ? "false" : "true"}
       style={style}
-      title={`${reader.chapter} · 已读 ${displayValue}%（点击打开目录）`}
-      aria-label={`全书阅读进度 ${displayValue}%，${reader.chapter}，点击打开目录`}
+      title={`全书进度 ${displayValue}%（点击打开目录）`}
+      aria-label={`全书阅读进度 ${displayValue}%，点击打开目录`}
       onClick={openCatalog}>
-      <span className="wrp-topline">
-        <span className="wrp-label">全书进度</span>
-        <span className="wrp-chapter">{reader.chapter}</span>
-        <strong className="wrp-value">{displayValue}%</strong>
-      </span>
       <span className="wrp-track" aria-hidden="true">
         <span className="wrp-fill" />
       </span>
+      <strong className="wrp-value">{displayValue}%</strong>
     </button>
   )
 }
